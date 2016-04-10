@@ -29,26 +29,27 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 
-// Revision 1 - 4/8/16
+// Revised Code - 4/8/16
 
 var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
 var wordLimit = 8;
 var shortText = truncateWords(originalText, wordLimit);
 
-function truncateWords(longText, numWords){			// <-- changed to standard function (instead of anonymous function), truncateWords() that accepts two arguments
-	var longTextArray = longText.split(' '); 
-	var wordCount = longTextArray.length; 
-	// var removeWords = wordCount - numWords; 		// <-- I removed this variable because it doesn't do anything
-	var shortTextArray = longTextArray.splice(0, numWords);
-	shortTextArray[8] = '...';
-	var shortText = shortTextArray.join(" ");
-	console.log('originalText: ' + originalText);
-	console.log('shortText: ' + shortText);
+function truncateWords(longText, numWords){     			// <-- Changed to standard function (instead of anonymous function), truncateWords() that accepts two arguments
+  var longTextArray = longText.split(' '); 
+  var wordCount = longTextArray.length; 
+  // var removeWords = wordCount - numWords;   			  // <-- I removed this variable because it doesn't do anything
+  var shortTextArray = longTextArray.splice(0, 8);		// <-- used index 8 instead of numWords
+  shortTextArray[8] = '...';
+  var shortText = shortTextArray.join(" ");
+  console.log('originalText: ' + originalText);
+  console.log('shortText: ' + shortText);
 }
+
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 
-// Original Submission Code - 4/5/16
+// Original Code - 4/5/16
 
 /*
 var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
