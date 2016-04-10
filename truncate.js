@@ -46,7 +46,6 @@ function truncateWords(longText, numWords){     			// <-- Changed to standard fu
   console.log('shortText: ' + shortText);
 }
 
-
 // ---------------------------------------------------------------------------------------------------------------------------------
 
 // Original Code - 4/5/16
