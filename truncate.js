@@ -29,17 +29,17 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 
-// Revised Code - 4/8/16
+// Final Submission Code to be Graded
 
 var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
 var wordLimit = 8;
 var shortText = truncateWords(originalText, wordLimit);
 
-function truncateWords(longText, numWords){     			// <-- Changed to standard function (instead of anonymous function), truncateWords() that accepts two arguments
+function truncateWords(longText, numWords){     			// <-- Changed to named function (instead of anonymous function), truncateWords() that accepts two arguments
   var longTextArray = longText.split(' '); 
   var wordCount = longTextArray.length; 
-  // var removeWords = wordCount - numWords;   			  // <-- I removed this variable because it doesn't do anything
-  var shortTextArray = longTextArray.splice(0, 8);		// <-- used index 8 instead of numWords
+  // var removeWords = wordCount - numWords;   			  // <-- I removed this variable because it was not necessary to produce the same result 
+  var shortTextArray = longTextArray.splice(0, 8);		// <-- used index 8 instead of numWords becuase I found it more reliable for long-term use
   shortTextArray[8] = '...';
   var shortText = shortTextArray.join(" ");
   console.log('originalText: ' + originalText);
